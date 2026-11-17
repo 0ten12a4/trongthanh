@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2a1f17">
+  <title>Nguyễn Trọng Thành 12A4</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,800;0,8..60,900;1,8..60,400;1,8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+  <!-- I. Xin chào (đầu báo) -->
+  <header class="masthead">
+    <div class="mast-top"><span class="hello" lang="zh">你好</span><span class="orn" aria-hidden="true">✦ ✦ ✦</span><span class="issue">12A4</span></div>
+    <h1><span>Xin chào các bạn</span></h1>
+    <div class="deck">
+      <p class="deck-name"><span>Mình là Nguyễn Trọng Thành</span></p>
+      <p class="deck-sub">đây là trang web giới thiệu về bản thân mình</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="paper">
+
+      <!-- Cột 1: ảnh -->
+      <section class="col col-photo">
+        <p class="kicker"><b>I</b> Ảnh của mình</p>
+        <figure class="photo">
+          <img src="THANH1.jpg" alt="Ảnh Nguyễn Trọng Thành">
+        </figure>
+      </section>
+
+      <!-- Cột 2: thông tin cá nhân -->
+      <section class="col col-info reveal" id="thong-tin">
+        <p class="kicker"><b>II</b> Thông tin cá nhân</p>
+        <h2>Thông tin cá nhân</h2>
+        <dl class="facts">
+          <div><dt>Họ tên</dt><dd>Nguyễn Trọng Thành</dd></div>
+          <div><dt>Tuổi</dt><dd>17 tuổi</dd></div>
+          <div><dt>Đang học</dt><dd>Lớp 12A4 · Trường THPT Hòn Gai</dd></div>
+          <div><dt>Ngày sinh</dt><dd>15/1</dd></div>
+        </dl>
+        <a class="btn" href="https://www.facebook.com/thanh.nguyen.769126?locale=vi_VN" target="_blank" rel="noopener">Facebook <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <!-- Cột 3: những điều thú vị -->
+      <section class="col col-fun reveal" id="dieu-thu-vi">
+        <p class="kicker"><b>III</b> Điều thú vị</p>
+        <h2>Những điều thú vị về mình</h2>
+        <dl class="facts">
+          <div><dt>Cung</dt><dd>Ma Kết</dd></div>
+          <div><dt>Môn học yêu thích</dt><dd>Văn</dd></div>
+        </dl>
+        <p class="line">Mình không giỏi hòa đồng với mọi người.</p>
+        <p class="line">Mình rất thích <b>chơi game</b>, <b>đọc truyện</b>, <b>ngắm cảnh</b>, <b>đạp xe</b> và <b>đi ngủ</b>.</p>
+      </section>
+
+      <!-- Cột 4: trường mục tiêu -->
+      <section class="col col-uni reveal" id="truong-muc-tieu">
+        <p class="kicker"><b>IV</b> Trường đại học mục tiêu</p>
+        <h2>Ngôi trường mục tiêu là Hust</h2>
+        <div class="logo-box"><img src="hust.png" alt="Logo Đại học Bách Khoa Hà Nội"></div>
+        <a class="btn" href="https://ts.hust.edu.vn/tin-tuc/bach-khoa-ha-noi-cong-bo-nguong-dau-vao-cac-nganh-vi-mach-ban-dan-nam-2026" target="_blank" rel="noopener">Bách Khoa Hà Nội <span aria-hidden="true">↗</span></a>
+      </section>
+
+    </div>
+
+    <!-- V. Video (chỉ là liên kết) -->
+    <section class="cinema reveal" id="video">
+      <p class="kicker light"><b>V</b> Video</p>
+      <a class="yt" href="https://www.youtube.com/watch?v=jq1ooH8WjJo" target="_blank" rel="noopener">Xem video trên YouTube <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>
+</html>
